@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="es"><!--<![endif]--><head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>CodeCamp 2020</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--main style-->
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      margin: 0 auto;
+      width: 70%;
+  }
+	/* TITRE */
+	h1 {
+	  margin-top: 0;
+	  font-size: 3rem;
+	  display: inline-block;
+	}
+	h1 div {
+	  position: relative;
+	  float: left;
+	}
+	h1 div:first-child {
+	  color: #3498db;
+	  margin-right: 1rem;
+	}
+	/* PROFIL */
+	.blog .carousel-indicators {
+		left: 0;
+		top: auto;
+		bottom: -40px;
+
+	}
+
+	/* The colour of the indicators */
+	.blog li {
+		background: #a3a3a3;
+		border-radius: 50%;
+		width: 8px;
+		height: 8px;
+		margin-bottom:10px;
+		
+	}
+
+	.blog .active {
+	background: #707070;
+	margin-bottom:10px;
+	}
+
+	.our-team-section {
+	  position: relative;
+	  padding-top: 40px;
+	  padding-bottom: 40px;
+	}
+	.our-team-section:before {
+	  position: absolute;
+	  top: -0;
+	  left: 0;
+	  content: " ";
+	  background: url(img/service-section-bottom.png);
+	  background-size: 100% 100px;
+	  width: 100%;
+	  height: 100px;
+	  float: left;
+	  z-index: 99;
+	}
+	.our-team {
+	  padding: 0 0 40px;
+	  background: #f9f9f9;
+	  text-align: center;
+	  overflow: hidden;
+	  position: relative;
+	  border-bottom: 5px solid #00325a;
+	}
+	.our-team:hover {
+	  border-bottom: 5px solid #2f2f2f;
+	}
+
+	.our-team .pic {
+	  display: inline-block;
+	  width: 130px;
+	  height: 130px;
+	  margin-bottom: 50px;
+	  z-index: 1;
+	  position: relative;
+	}
+	.our-team .pic:before {
+	  content: "";
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 50%;
+	  background: #00325a;
+	  position: absolute;
+	  bottom: 135%;
+	  right: 0;
+	  left: 0;
+	  opacity: 1;
+	  transform: scale(3);
+	  transition: all 0.3s linear 0s;
+	}
+	.our-team:hover .pic:before {
+	  height: 100%;
+	  background: #2f2f2f;
+	}
+	.our-team .pic:after {
+	  content: "";
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 50%;
+	  background: #ffffff00;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: 1;
+	  transition: all 0.3s linear 0s;
+	}
+	.our-team:hover .pic:after {
+	  background: #7ab92d;
+	}
+	.our-team .pic img {
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 50%;
+	  transform: scale(1);
+	  transition: all 0.9s ease 0s;
+	  box-shadow: 0 0 0 14px #f7f5ec;
+	  transform: scale(0.7);
+	  position: relative;
+	  z-index: 2;
+	}
+	.our-team:hover .pic img {
+	  box-shadow: 0 0 0 14px #f7f5ec;
+	  transform: scale(0.7);
+	}
+	.our-team .team-content {
+	  margin-bottom: 30px;
+	}
+	.our-team .title {
+	  font-size: 22px;
+	  font-weight: 700;
+	  color: #4e5052;
+	  letter-spacing: 1px;
+	  text-transform: capitalize;
+	  margin-bottom: 5px;
+	}
+	.our-team .post {
+	  display: block;
+	  font-size: 15px;
+	  color: #4e5052;
+	  text-transform: capitalize;
+	}
+	.our-team .social {
+	  width: 100%;
+	  padding-top: 10px;
+	  margin: 0;
+	  background: #2f2f2f;
+	  position: absolute;
+	  bottom: -100px;
+	  left: 0;
+	  transition: all 0.5s ease 0s;
+	}
+	.our-team:hover .social {
+	  bottom: 0;
+	}
+	.our-team .social li {
+	  display: inline-block;
+	}
+	.our-team .social li a {
+	  display: block;
+	  padding-top: 6px;
+	  font-size: 15px;
+	  color: #fff;
+	  transition: all 0.3s ease 0s;
+	}
+	.our-team .social li a:hover {
+	  color: #2f2f2f;
+	  background: #f7f5ec;
+	}
+	@media only screen and (max-width: 990px) {
+	  .our-team {
+		margin-bottom: 10px;
+	  }
+	}
+
+  </style>
+
+<!--google font style-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+<!--font-family: 'Open Sans', sans-serif;-->
+<!-- font css style-->
+<link rel="stylesheet" type="text/css"  href="../../../css/font-awesome.css">
+<!--for slider style-->
+
+<link rel="icon" type="image/png" href="../../../images/favicon.png" />
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header tocenter" style="width:100%; text-align:center">
+      <a href="https://www.um.es/infomun/codecamp/ediciones/2019/">
+        <img alt="codecamp" class="img-responsive center-block" src="../../images/codecamp-land.png" width="500">
+        </a>
+<ol class="breadcrumb">
+  <li class="active"><a href="https://www.um.es/infomun/codecamp/ediciones/2020/">Inicio</a></li>
+  <li><a href="#charlas">Charlas</a></li>
+  <li><a href="#encuesta">Encuesta</a></li>
+  <li><a href="#horario">Horarios</a></li>
+  <li><a href="#ponentes">Ponentes</a></li>
+  <li><a href="#inscripcion">Inscripción</a></li>
+  <li><a href="#como-llegar">Cómo llegar</a></li>
+  <li><a href="#equipo">El equipo</a></li>
+  <li><a href="#contacto">Contacto</a></li>
+  <li><a href="#colabora">Colabora</a></li>
+</ol> 
+</div>
+</div>
+</nav>
+</head><body>
+<div class="container">
+<div class="col-md-12-e">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="../../images/slider/llamacodecamp2020.png" class="img-responsive" alt="llama2020">
+    </div>
+    <div class="item">
+      <img src="../../images/slider/conectacodecamp.png" class="img-responsive" alt="laptop">
+    </div>
+    <div class="item">
+      <img src="../../images/slider/llamacodecamp.png" class="img-responsive" alt="flame">
+    </div>
+    <div class="item">
+      <img src="../../images/slider/cccodecamp.png" class="img-responsive" alt="share-networking">
+    </div>    
+    </div>
+    </div>
+	<div class="jumbotron" style="background-color:#ECFDF7">
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+      <h2 class="featurette-heading">🦙CodeCamp <span class="text-muted">|</span> ¿Qué es? 🦙</h2>
+<p class="lead" align="justify"> Es un evento de tres días en el que se realizarán charlas, talleres y actividades.</p>
+      <p class="lead" align="justify">Dichas actividades fomentarán la integración, dinámicas de grupo y se enfocarán en estrechar lazos comunes entre los asistentes a través de un mismo hilo conductor: <strong>la informática como pasión y profesión</strong>.</p>
+        <p class="lead" align="justify">Estas versarán sobre cuestiones de seguridad, algoritmia, redes y sistemas operativos mediante distintas pruebas que deberán resolverse a través de un CTF (Capture the Flag) enfatizando así en la importancia del equipo para alcanzar un objetivo común.</p>
+      <p class="lead" align="justify">Las charlas tendrán un fin didáctico complementario a cuestiones propias de la carrera.</p>
+	 <p class="lead" align="justify">🗓️<b> Fecha:</b> del 6 al 8 de Marzo</p>
+      <p class="lead" align="justify">🛰️<b> Ubicación:</b> Albergue Juvenil de Calarreona, Águilas - <a href="#como-llegar">¿Cómo llegar?</a></p>   
+ </div>      
+  <div class="col-md-5">
+  <img class="featurette-image img-rounded img-responsive center-block" src="../../images/albergue.png" data-holder-rendered="true">
+  </div>
+  <hr class="featurette-divider">
+    <div class="col-md-7">
+      <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DKr1KEk3IO8" encrypted-media" allowfullscreen></iframe>
+    </div>
+      </div>
+                                                                                                          
+    <div class="col-md-5">  
+      <h2 class="featurette-heading" align="justify">¡&Uacute;nete a la cuarta edición!</h2>
+      <p class="lead" align="justify">Aquí te dejamos un vídeo de cómo fue en ediciones anteriores. ¿Te animas? 💻</p>                              
+      </div>
+</div>
+  </div>
+   
+<hr class="featurette-divider">                                     
+<section id="encuesta"> 
+<h2 class="featurette-heading">Encuesta</h2>
+<h4><p>Encuesta CodeCamp20: Alergias, alojamiento y camiseta. Por favor, rellenarlo aquellos que vayan a ir al evento: <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=nOAyex5xS0y-UNKj12_yTHFkwQYr_UJNptAK79f3kGVURVBEUDZDVU5RQ01ZRE03WFo2UlJBSVNaWi4u">Encuesta</a></iframe></h4></iframe>
+</section>
+                              
+                              
+
+
+  <hr class="featurette-divider">
+  <section id="charlas">
+
+    <h2 class="featurette-heading">Charlas</h2>
+
+    <div class="panel panel-primary">
+  <div class="panel-heading">
+    <table class="table table-responsive-sm">
+    <tr>
+    <th bgcolor="#337ab7">#</th>
+    <th class="text-center" bgcolor="#337ab7">Charla</th>
+    <th bgcolor="#337ab7"></th>
+    <th class="text-center" bgcolor="#337ab7">Ponente</th>
+    </tr>
+  </table>
+  </div>
+
+  <table class="table table-responsive-sm">
+    <tr>
+    <th>#1</th>
+    <td>Charla de Ciberseguridad</td>
+    <td>Alejandro Cano Bermudez</td>
+    <td>👌</td>
+    </tr>                                                               
+         
+    <tr>
+    <th>#2</th>
+    <td>Internet de las Cosas: principios y tecnologías básicas</td>
+    <td>Ramon Sanchez Iborra</td>
+    <td>👌</td>
+    </tr>
+           
+    <tr>
+    <th>#3</th>
+    <td>Casos de Éxito en Desarrollos de Internet de las Cosas</td>
+    <td>Jesus Sanchez Gomez</td>
+    <td>👌</td>
+    </tr>
+                                          
+    <tr>
+    <th>#4</th>
+    <td>Charla de machine learning</td>
+    <td>Juan Antonio Botía Blaya </td>
+    <td>👌</td>
+    </tr> 
+                                          
+    <tr>
+    <th>#5</th>
+    <td>Charla sofware orientado a web</td>
+    <td>Francisco Javier Bermúdez Ruiz</td>
+    <td>👌</td>
+    </tr>
+                                                               
+  </table>
+                                                             
+                                                               
+</div>
+                                                               
+   <h2 class="featurette-heading">Actividades</h2>
+ 
+    <div class="panel panel-info">
+  <div class="panel-heading">
+    <table class="table table-responsive-sm">
+    <tr>
+    <th bgcolor="#d9edf7">#</th>
+    <th bgcolor="#d9edf7">Actividad</th>
+    <th bgcolor="#d9edf7"></th>
+    </tr>
+  </table>
+  </div>
+
+  <table class="table table-responsive-sm">
+  <tr>
+    <th>#1</th>
+    <td><b>Actividad principal:</b> CTF (Capture the Flag)</td>
+    <td>🤯</td>
+  </tr>
+    
+  <tr>
+    <th>#2</th>
+    <td>Taller de IoT</td>
+    <td>🧠</td>
+  </tr>
+  <tr>
+
+                                                                 <tr>
+    <th>#3</th>
+    <td>Reto de programación</td>
+    <td>🧠</td>
+  </tr>
+  <tr>
+  
+  <th>#4</th>
+    <td>Taller ciberseguridad</td>
+    <td>🤟🏻</td>
+    </tr>
+                                                                 
+<th>#5</th>
+    <td>Kahoot</td>
+    <td>😉</td>
+    </tr>
+
+  </table>
+  </div>                                                                                                                    
+</section>
+
+<hr class="featurette-divider">
+    <section id="horario">
+      <h2 class="featurette-heading">Horario <span class="text-muted"> | tentativo </span> | <a href="https://www.um.es/infomun/codecamp/ediciones/2020/horario/horario.pdf">programación</a></h2>
+<table class="table table-responsive-sm table-striped table-bordered table-sm">
+<thead>
+<tr>
+    <th class="text-center">Hora (h)</th>
+    <th class="text-center">Viernes <br> 6</th>
+    <th class="text-center">Sábado <br> 7</th>
+    <th class="text-center">Domingo <br> 8</th>
+  </tr>
+</thead>
+<tbody>
+ <tr>
+    <td class="text-center">8:30</td>
+	<td class="text-center" rowspan="51"></td>
+	<td class="text-center" bgcolor="#d9edf7" rowspan="6">Desayuno</td>
+    <td class="text-center" bgcolor="#d9edf7" rowspan="6">Desayuno</td>
+  </tr>
+ <tr>
+    <td class="text-center">8:40</td>
+  </tr>
+ <tr>
+    <td class="text-center">8:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">9:00</td>
+
+  </tr>
+  <tr>
+    <td class="text-center">9:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">9:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">9:30</td>
+	<td class="text-center" bgcolor="#d1f932" rowspan="12">Tiempo para actividades</td>
+    <td class="text-center" bgcolor="#d1f932" rowspan="8">Tiempo para actividades</td>
+  </tr>
+  <tr>
+    <td class="text-center">9:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">9:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">10:00</td>
+  </tr>
+  <tr>
+    <td class="text-center">10:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">10:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">10:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">10:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">10:50</td>
+		<td class="text-center" bgcolor="#d1f932" rowspan="4"> Taller Ciberseguridad <br> Demo Pentest <br></td>
+
+  </tr>
+  <tr>
+    <td class="text-center">11:00</td>
+  </tr>
+  <tr>
+    <td class="text-center">11:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">11:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">11:30</td>
+	<td class="text-center" bgcolor="#d9edf7" rowspan="1">Coffee Break</td>
+    <td class="text-center" bgcolor="#d9edf7" rowspan="1">Coffee Break</td>
+  </tr>
+  <tr>
+    <td class="text-center">11:40</td>
+	<td class="text-center" bgcolor="#d1f932" rowspan="4">Tiempo para actividades</td>
+	<td class="text-center" bgcolor="#f5ca35" rowspan="5">Charla 5</td>
+
+  </tr>
+  <tr>
+    <td class="text-center">11:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">12:00</td>
+  </tr>
+  <tr>
+    <td class="text-center">12:10</td>
+	</tr>
+  <tr>
+    <td class="text-center">12:20</td>
+	<td class="text-center" bgcolor="#dff0d8" rowspan="5">Internet de las Cosas: <br> Principios y tecnolog&iacute;s b&aacute;sicas <br> Ram&oacute;n S&aacute;nchez Iborra </td>
+  </tr>
+  <tr>
+    <td class="text-center">12:30</td>
+	<td class="text-center" bgcolor="#d1f932" rowspan="5">Tiempo para actividades</td>
+  </tr>
+  <tr>
+    <td class="text-center">12:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">12:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">13:00</td>
+  </tr>
+  <tr>
+    <td class="text-center">13:10</td>
+	<td class="text-center" bgcolor="#dff0d8" rowspan="5">Casos de &eacute;xito en desarrollo de IoT <br> Jes&uacute;s S&aacute;nchez Gomez  </td>
+  </tr>
+  <tr>
+    <td class="text-center">13:20</td>
+	<td class="text-center" rowspan="1" bgcolor="#f2755b">Fin de resolución del CTF</td>
+  </tr>
+  <tr>
+    <td class="text-center">13:30</td>
+	<td class="text-center" bgcolor="#e088ed" rowspan="3">Kahoot</td>
+  </tr>
+  <tr>
+    <td class="text-center">13:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">13:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">14:00</td>
+    <td class="text-center" bgcolor="#d9edf7" rowspan="6">Comida</td>
+    <td class="text-center" bgcolor="#d9edf7" rowspan="6">Comida</td>
+  </tr>
+  <tr>
+    <td class="text-center">14:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">14:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">14:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">14:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">14:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">15:00</td>
+	<td class="text-center" bgcolor="#fcf8e3" rowspan="1">Descanso</td>
+	<td class="text-center" bgcolor="#dacf01" rowspan="2">Entrega de premios</td> 
+  </tr>
+  <tr>
+    <td class="text-center">15:10</td>
+	<td class="text-center" bgcolor="#d1f932" rowspan="13"> Taller IoT</td>
+
+  </tr>
+  <tr>
+    <td class="text-center">15:20</td>
+	<td class="text-center" bgcolor="#f5ca35" rowspan="4">Acto de clausura</td>
+  </tr>
+  <tr>
+    <td class="text-center">15:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">15:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">15:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">16:00</td>
+	<td class="text-center" bgcolor="#f2755b" rowspan="3">Check-out</td>
+  </tr>
+  <tr>
+    <td class="text-center">16:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">16:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">16:30</td>
+	<td class="text-center" bgcolor="#f2dede" rowspan="9">Viaje en autobús</td>
+  </tr>
+  <tr>
+    <td class="text-center">16:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">16:50</td> 
+  </tr>
+  <tr>
+    <td class="text-center">17:00</td>
+	<td class="text-center" bgcolor="#fcf8e3">Recogida:<br> FIUM</td>
+  </tr>
+  <tr>
+    <td class="text-center">17:10</td>
+	<td class="text-center" bgcolor="#f2dede">Viaje en autobús</td>
+  </tr>
+  <tr>
+    <td class="text-center">17:20</td>
+	<td class="text-center" bgcolor="#fcf8e3">Recogida:<br> Murcia</td>
+	<td class="text-center" bgcolor="#f5ca35" rowspan="2">Presentaci&oacute;n Ada Byron Programaci&oacute;n</td>
+  </tr>
+  <tr>
+    <td class="text-center">17:30</td>
+	<td class="text-center" bgcolor="#f2dede" rowspan="9">Viaje en autobús</td>
+  </tr>
+  <tr>
+    <td class="text-center" >17:40</td>
+	<td class="text-center" bgcolor="#d9edf7" rowspan="2">Coffee Break</td>
+  </tr>
+  <tr>
+    <td class="text-center">17:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">18:00</td>
+	<td class="text-center" bgcolor="#d1f932" rowspan="12">Concurso <br> Ada Bryron </td>
+	<td class="text-center" bgcolor="#fcf8e3">Parada:<br> Murcia</td>
+  </tr>
+  <tr>
+    <td class="text-center">18:10</td>
+	<td class="text-center" bgcolor="#f2dede">Viaje en autobús</td>
+  </tr>
+  <tr>
+    <td class="text-center">18:20</td>
+	<td class="text-center" bgcolor="#fcf8e3">Parada:<br> FIUM</td>
+  </tr>
+  <tr>
+    <td class="text-center">18:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">18:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">18:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">19:00</td>
+	<td class="text-center" bgcolor="#f2755b" rowspan="1">Check-in</td>
+  </tr>
+  <tr>
+    <td class="text-center">19:10</td>
+	<td class="text-center" bgcolor="#f5ca35" rowspan="5">Acto de apertura</td>
+  </tr>
+  <tr>
+    <td class="text-center">19:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">19:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">19:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">19:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">20:00</td>
+	<td class="text-center" bgcolor="#f5ca35" rowspan="6">Charla Ciberseguridad</td>
+	<td class="text-center" bgcolor="#dff0d8" rowspan="6">Machine Learning en R: <br> Juan A Botia </td>
+	</tr>
+  <tr>
+    <td class="text-center">20:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">20:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">20:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">20:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">20:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">21:00</td>
+    <td class="text-center" bgcolor="#d9edf7" rowspan="6">Cena</td>
+    <td class="text-center" bgcolor="#d9edf7" rowspan="6">Cena</td>
+  </tr>
+  <tr>
+    <td class="text-center">21:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">21:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">21:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">21:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">21:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">22:00</td>
+	<td class="text-center" bgcolor="#f5ca35" rowspan="2">Presentaci&oacute de las pruebas del CTF</td>
+    <td class="text-center" bgcolor="#d1f932" rowspan="10">Tiempo para actividades</td>
+  </tr>
+  <tr>
+    <td class="text-center">22:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">22:20</td>
+	<td class="text-center" bgcolor="#d1f932" rowspan="8">Tiempo para actividades</td>
+  </tr>
+  <tr>
+    <td class="text-center">22:30</td>
+  </tr>
+  <tr>
+    <td class="text-center">22:40</td>
+  </tr>
+  <tr>
+    <td class="text-center">22:50</td>
+  </tr>
+  <tr>
+    <td class="text-center">23:00</td>
+  </tr>
+  <tr>
+    <td class="text-center">23:10</td>
+  </tr>
+  <tr>
+    <td class="text-center">23:20</td>
+  </tr>
+  <tr>
+    <td class="text-center">23:30</td>
+  </tr>
+</tbody>
+</table>
+</section> 
+ <hr class="featurette-divider">
+<section id="ponentes">
+      
+ <div class="row blog">
+<h2>
+  <div class="animated fadeInLeft">Ponentes</div>
+</h2>
+                <div class="col-md-12">
+                                <div class="row">
+							  <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/ponentes/juan.png">
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Juan Antonio Botía Blaya</h3>
+								  </div>
+								</div>
+							  </div>
+
+							  <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/ponentes/jesus.jpg">
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Jesus Sanchez Gomez </h3><br>
+								  </div>
+								</div>
+							  </div>
+							  
+							  <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/ponentes/ramon.jpg">
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Ramon Sanchez Iborra</h3> <br>
+								  </div>
+								</div>
+							  </div>
+
+							  <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/ponentes/pablo.png">
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Pablo Sempere Frutos</h3> <br>
+								  </div>
+								</div>
+							  </div>	  
+						</div>
+						
+						&nbsp;<br><br>
+
+                            <div class="carousel-item">
+                                <div class="row">
+							 <div class="col-lg-3 col-md-6 col-sm-6"> </div>
+
+							  <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/ponentes/alejandro.png" >
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Alejandro Cano Bermúdez </h3><br>
+								  </div>
+								</div>
+							  </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/ponentes/fjbr.png" >
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Francisco Javier Bermúdez Ruiz</h3><br>
+								  </div>
+								</div>
+							  </div>
+							<div class="col-lg-3 col-md-6 col-sm-6"></div>
+					</div>
+				</div>
+						
+				</div>                                       
+</section>
+
+
+    <hr class="featurette-divider">
+<section id="inscripcion">
+      <h2 class="featurette-heading">Inscripción</h2>
+<div class="panel panel-default">
+  <div class="panel-body">
+<h4>🏕️ [Actualizado a 22/02/2020] Abiertas inscripciones 😍</h4>
+<h5><a href="https://casiopea.um.es/cursospe//codecampiv.f" target="_blank">Cumplimentar inscripción</a></h5>
+</div>
+</section>
+ <hr class="featurette-divider">
+<section id="como-llegar">
+  <h2 class="featurette-heading">Cómo llegar <span class="text-muted">| Albergue Juvenil de Calarreona, Águilas</span></h2>
+<div class="card mb-3">
+  <div class="card-body">
+    <p class="card-text">Los inscritos podrán elegir entre llegar al albergue por sus propios medios o en el autobús que pondrá la organización.</p>
+  </div>
+  <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="card-img-top" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.2152775067507!2d-1.6230247846935304!3d37.38474087983229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd64ce97034b0249%3A0x689d61ef4f09e21e!2sAlbergue+Juvenil+Calarreona!5e0!3m2!1ses!2ses!4v1515598466678" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>
+</section>
+    <hr class="featurette-divider">
+<section id="equipo">
+       
+	   <div class="row blog">
+		<h2>
+			<div class="animated fadeInLeft">El equipo</div>
+		</h2>
+                <div class="col-md-12">
+                                <div class="row">
+								  <div class="col-lg-3 col-md-6 col-sm-6">
+									<div class="our-team">
+									  <div class="pic">
+										<img src="../../images/equipo/ginesgm.jpg">
+									  </div>
+									  <div class="team-content">
+										<h3 class="title">Ginés García Mateos</h3><br>
+									  </div>
+									</div>
+								  </div>
+
+								  <div class="col-lg-3 col-md-6 col-sm-6">
+									<div class="our-team">
+									  <div class="pic">
+										<img src="../../images/equipo/porver.png">
+									  </div>
+									  <div class="team-content">
+										<h3 class="title">Luis Gregorio Torres Fernández</h3>
+									  </div>									  
+									</div>
+								  </div>
+	  
+								  <div class="col-lg-3 col-md-6 col-sm-6">
+									<div class="our-team">
+									  <div class="pic">
+										<img src="../../images/equipo/lazaro-amor.jpg">
+									  </div>
+									  <div class="team-content">
+										<h3 class="title">Lázaro Amor</h3><br>
+									  </div>						
+									</div>
+								  </div>
+
+								  <div class="col-lg-3 col-md-6 col-sm-6">
+									<div class="our-team">
+									  <div class="pic">
+										<img src="../../images/equipo/miguel.jpg">
+									  </div>
+									  <div class="team-content">
+										<h3 class="title">Miguel Martínez Bernal</h3><br>								
+									  </div>						
+									</div>
+								  </div>
+							</div>
+						&nbsp;<br><br>
+
+                            <div class="carousel-item">
+                                <div class="row">
+							 <div class="col-lg-3 col-md-6 col-sm-6"> </div>
+
+							  <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/equipo/pedro.jpg" >
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Pedro José Mendez </h3><br>
+								  </div>
+								</div>
+							  </div>
+							  
+							  <div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+								  <div class="pic">
+									<img src="../../images/equipo/diego.jpg">
+								  </div>
+								  <div class="team-content">
+									<h3 class="title">Diego Domene Quesada</h3>
+								  </div>
+								</div>
+							  </div>
+
+							<div class="col-lg-3 col-md-6 col-sm-6"></div>
+					</div>
+				</div>
+	   
+		</section>
+
+    <hr class="featurette-divider">
+<section id="contacto">
+<div class="jumbotron">
+  <div class="span12 text-center"><h2>ℹ️ Informaci&oacute;n de contacto</h2></div>
+  <p>✉️ Correo: <a href="mailto:codecampmurcia@gmail.com">codecampmurcia@gmail.com</a></p>
+  <p>✉️ Instagram: codecampmurcia</p>
+  <p>🐦 Twitter: <a href="https://twitter.com/codecampmurcia">@codecampmurcia</a></p>
+  <p><span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp; Telegram: <a href="https://t.me/CondePerro" target="_blank">@CondePerro</a> y <a href="https://t.me/pjemci" target="_blank">@pjemci</a></p>
+    <p>✉️ <a href="mailto:vice_alumnos.inf@um.es">vice_alumnos.inf@um.es</a></p>
+</div>
+</section>
+<!--    <hr class="featurette-divider">
+<section id="localizacion">
+        <h3 class="featurette-heading">Localización del albergue:</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.707567904941!2d-0.7728746851421936!3d37.843731379747005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd630f9ed6d5ba71%3A0x3ad173ac19e2b76a!2sALBERGUE+JUVENIL+SAN+PEDRO+DEL+PINATAR!5e0!3m2!1ses!2ses!4v1486037306601" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  </section>-->
+    <hr class="featurette-divider">
+<section id="organiza">
+      <h3 class="featurette-heading">Organiza:</h3>
+<div class="row">
+<div class="col-lg-4">
+  <p><a href="http://www.um.es/informatica/index.php?pagina=miembros_equipo_directivo" target="_blank">Decanato de la Facultad de Informática</a></p>
+        <a href="http://www.um.es/informatica/" target="_blank"><img class="img-responsive" src="../../images/FI-UM-apilado-positivo.png" alt="Facultad de Informática de la Unviersidad de Murcia"></a>
+    </div>
+    <div class="col-lg-4">
+	<br><br><br>
+  <img class="img-responsive" src="../../images/logo-dafi.png" alt="Logo DAFI - Delegación de Alumnos de la Facultad de Informática" width="287">
+</div>
+<div class="col-lg-4">
+  <img class="img-responsive" src="../../images/infomun-je-2.png" alt="Logo Infomun" width="287">
+</div>
+</div>
+</section>
+    <hr class="featurette-divider">
+<section id="colabora">
+      <h3 class="featurette-heading">Colaboran:</h3>
+ 
+
+
+  <div class="jumbotron platino" id="inforges">
+      <div class="span12 text-center"><h2>Platino</h2></div>
+  <a href="http://www.inforges.es/?utm_source=codecamp&amp;utm_medium=banner&amp;utm_campaign=codecamp17" target="_blank"><img class="img-fluid center-block" src="../../images/colabora/inforges-2019.png" alt="Logo Inforges" width="30%"></a>
+  <br>
+  <div class="span12 text-center"><p>Acerca de Inforges:
+  </p><p>Somos una consultora <strong>con sede en Murcia, Alicante y Valencia,</strong> especializada en <strong>Tecnología, Organización, Gestión del Talento y Comunicación digital.</strong> Inforges, con más de 40 años de experiencia y más de 200 profesionales, ofrece a <strong>pequeñas, medianas y grandes empresas,</strong> tanto del <strong>sector público como privado,</strong> soluciones globales que les harán evolucionar a <strong>organizaciones mucho más eficientes, rentables e inteligentes.</strong></p>
+                                 <p>En 2018,  con la adquisición de la mayoría del capital por parte de <strong>Seidor,</strong> consultora multinacional especializada en servicios y soluciones tecnológicas, hay una clara apuesta por la <strong>internacionalización,</strong> complementando e integrando el portfolio de servicios y soluciones de ambas compañías, y por <strong>fortalecer y consolidar nuestra cobertura en el Levante español.</strong></p></div>
+  
+ </div>  
+ 
+ <div class="jumbotron platino" id="everis">
+  <div class="span12 text-center"><h2>Platino</h2></div>
+  <a href="https://www.neoris.com/es/" target="_blank"><img class="img-responsive center-block" src="../../images/colabora/everis.png" alt="Logo Capgemini"></a>
+  <br>
+ </div>
+ 
+  <div class="jumbotron diamante" id="Neoris">
+  <div class="span12 text-center"><h2>Diamante</h2></div>
+  <a href="https://www.neoris.com" target="_blank"><img class="img-responsive center-block" src="../../images/colabora/neoris.png" alt="Logo Capgemini" width="40%"></a>
+  <br>
+ <div class="span12 text-center"><p>Acerca de Neoris:</p>
+<p>NEORIS es una compañía líder global que diseña soluciones disruptivas para empresas que desean potenciar las interacciones con sus clientes, empleados y otras audiencias clave a través de estrategias de innovación digital.</p>
+<p>Con sede en Miami, Florida (USA), NEORIS cuenta con una red global de oficinas, centros de innovación y operaciones en Estados Unidos, Europa, Latinoamérica, África, Oriente Medio y Asia.</p>
+ 
+<p>Más información en:<a href="https://www.neoris.com/es/" target="_blank">https://www.neoris.com/es/</a></p> 
+ 
+<p></p></div>
+ </div>
+ 
+ <div class="jumbotron oro" id="capgemini">
+      <div class="span12 text-center"><h2>Oro</h2></div>
+  <a href="https://www.capgemini.com" target="_blank"><img class="img-responsive center-block" src="../../images/colabora/capgemini2018.png" alt="Logo Neoris" width="40%"></a>
+  <br>
+  <div class="span12 text-center"><p>Acerca de Capgemini
+Un líder global en servicios de consultoría, servicios de tecnología y transformación digital, Capgemini está a la vanguardia de la innovación para abordar la diversidad de oportunidades que tienen sus empresas clientes en el dinámico entorno de las plataformas, la nube y lo digital. Respaldada por una sólida trayectoria de 50 años y una dilatada experiencia multisectorial, Capgemini ayuda a las compañías a alcanzar sus objetivos de negocio mediante una amplia gama de servicios que cubre desde la estrategia, hasta las operaciones. Capgemini actúa bajo la firme convicción de que el valor de negocio de la tecnología se genera y desarrolla a través de las personas. Capgemini es una compañía multicultural de más de 200.000 profesionales, presente en más de 40 países y, en 2018, registró unos ingresos mundiales de 13.200 millones de euros.
+ 
+</p><p>Más información en:</p> 
+ 
+<p><a href="https://www.capgemini.com/es-es/" target="_blank">https://www.capgemini.com/es-es/</a></p>
+ 
+<p><a href="https://www.capgemini.com/es-es/service/murcia/" target="_blank">https://www.capgemini.com/es-es/service/murcia/</a></p>
+ 
+<p>People matter, results count</p>
+<p></p></div>
+ 
+  </div>  
+  <div class="jumbotron oro" id="pccomponentes">
+      <div class="span12 text-center"><h2>Oro</h2></div>
+   <a href="https://www.pccomponentes.com" target="_blank"><img class="img-responsive center-block" src="../../images/colabora/pccomponentes.png" alt="Logo pccomponentes" width="40%"></a>
+     <div class="span12 text-center"><p>Acerca de PCCOMPONENTES:</p>
+<p>¿Nos conoces? Somos una empresa líder en precio, calidad y servicio de tecnología e informática en España. Comenzamos nuestra andadura en 2005 con una pequeña tienda ubicada en Alhama de Murcia y en pocos años nos llegamos a consolidar como ecommerce líder del sector. Nuestra plantilla supera los 400 empleados, desarrollamos nuestra actividad omnicanal en España y Portugal y contamos con dos tiendas físicas en Murcia y Madrid</p>
+
+<p>¿Nuestro secreto? Rodearnos siempre del mejor equipo humano: talento, iniciativa y mejora continua son el ADN de las personas que forman parte de nuestra gran familia. El trato cercano y personalizado al cliente que tanto nos define, nace de nuestra orientación siempre por cuidar aquello que más nos importa. Sabemos que, esta empresa no sería lo que es, sin nuestros empleados, nuestra gran familia.</p>
+
+</div>
+  </div> 
+  
+<div class="row">
+  <div class="col-lg-2">
+      <img class="img-responsive" src="../../images/colabora/logo-um.png" alt="Vicerrectorado de Estudiantes">
+    </div>
+    <div class="col-lg-2">
+	<br><br><br>
+      <img class="img-responsive" src="../../images/colabora/logo MLP corporativo.jpg" alt="Logo MurciaLANPARTY">
+    </div>
+    <div class="col-lg-2">
+	<br><br>
+      <img class="img-responsive" src="../../images/colabora/wimax.png" alt="Logo WIMAX">
+    </div>
+</div>
+
+</section>
+</iframe>
+<footer class="footer"></footer>
+
+</body></html>
+</iframe>
